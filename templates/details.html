@@ -1,0 +1,29 @@
+<div style="text-align: center;">
+    <a ng-click="afficheCara()" class="button">Caracteristiques</a>
+    <a ng-click="afficheCom()" class="button">Commentaires</a></br>
+    <a ng-click="acheterArticle()" class="button">Acheter</a></br>
+
+    <div ng-show="isAfficheCom" style="text-align: center;">
+        <ul ng-show="isAfficheCom" style="text-align: center;">
+            <li ng-repeat="comment in art.comments | orderBy:'date'" class="comm">
+                <p style="font-style: italic">Posté le : {{comment.date | date:format:timezone}}</p>
+                <p>Par : {{comment.author}}</p>
+                <p><b>{{comment.message}}</b></p>
+            </li>
+            <li>
+                Par: {{tmpComm.author}}<br>
+                <b>{{tmpComm.message}}</b>
+            </li>
+        </ul>
+        <input type="text" ng-model="tmpComm.author" value="Auteur..."><br>
+        <textarea ng-model="tmpComm.message" value="Votre commentaire..."></textarea><br>
+        <a ng-click="createComm()" class="button">Commenter</a>
+    </div>
+
+    <div ng-show="isAfficheCara">
+        <p>Prix : {{art.price  | currency:"€"}}</p>
+        <p>{{art.description}}</p>
+        <p ng-show="art.quantity==0" style="color:red">Epuise</p>
+        <p ng-show="art.quantity>0" style="color:green">En stock</p>
+    </div>
+</div>

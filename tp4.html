@@ -1,0 +1,52 @@
+<html ng-app="my-app">
+    <head>
+        <link rel="stylesheet" type="text/css" href="./css/style.css">
+    </head>
+
+    <body>
+        <header class="header">
+            <img src="./img/tolkien.png" style="height: 50px;">
+            <a ng-href="#/home" style="color: white;">Tolkien Univers</a>
+            <div class="nav">
+                <a ng-href="#/livres">Livres</a>
+                <a ng-href="#/films">Films</a>
+            </div>
+
+        </header>
+
+        <div class="slideshow-container">
+            <div class="mySlides fade">
+                <img src="./img/img1.jpg">
+            </div>
+            <div class="mySlides fade">
+                <img src="./img/img2.jpg">
+            </div>
+        </div>
+
+        <script>
+            var slideIndex = 0;
+            showSlides();
+
+            function showSlides() {
+                var i;
+                var slides = document.getElementsByClassName("mySlides");
+                for (i = 0; i < slides.length; i++) {
+                    slides[i].style.display = "none";
+                }
+                slideIndex++;
+                if (slideIndex> slides.length) {slideIndex = 1}
+                slides[slideIndex-1].style.display = "block";
+                setTimeout(showSlides, 5000); // Change image every 5 seconds
+            }
+        </script>
+
+        <div ng-view></div>
+        <script type="text/javascript" src="./angular-1.6.2/angular.js"></script>
+        <script type="text/javascript" src="./js/app.js"></script>
+        <script type="text/javascript" src="./js/Directive/DirArticles.js"></script>
+        <script type="text/javascript" src="./js/Routage/Routes.js"></script>
+        <script type="text/javascript" src="./js/Controller/ArticlesController.js"></script>
+        <script type="text/javascript" src="./js/Controller/ControllerHome.js"></script>
+        <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.2/angular-route.min.js"></script>
+    </body>
+ </html>

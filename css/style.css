@@ -1,0 +1,129 @@
+body{
+    background-color: #f0f4ff;
+    margin: 0; padding: 0;
+    font-family: "Tempus Sans ITC";
+
+}
+.mySlides {
+    display:none;
+}
+.slideshow-container {
+    position: relative;
+    margin: auto;
+    text-align: center;
+    width: 100%;
+}
+
+.header{
+    font-family: "Viner Hand ITC";
+    background-color: black;
+    padding: 10px;
+    padding-left: 60px;
+    height: 60px;
+}
+
+.header > a{
+    text-decoration: none;
+    font-size: 40px;
+    float: left;
+    width: 50%;
+}
+.header> img{
+    float: left;
+    padding-right: 20px;
+}
+
+
+.nav{
+    text-align: right;
+    float: left;
+    width: 40%;
+    padding-top: 5px;
+}
+
+.nav >a {
+    font-size: 30px;
+    padding: 50px;
+    text-decoration: none;
+    color: white;
+}
+.nav >a:hover {
+    font-size: 30px;
+    padding: 50px;
+    text-decoration: none;
+    color: #d3b667;
+}
+article{
+    float: left;
+    width: calc(33% - 100px);
+    margin-right: 10px;
+    padding: 30px;
+
+}
+
+.img {
+    text-align: center;
+    padding-bottom: 20px;
+
+}
+img{
+    height: 200px;
+}
+
+ul{
+    list-style-type: none;
+    padding: 0px;
+    margin-left: 200px;
+    margin-right: 200px;
+}
+
+.comm{
+    border: solid 1px #93959c;
+    border-radius: 15px;
+    margin-bottom: 10px;
+    padding-left: 10px;
+}
+
+
+.button, button{
+    background-color: #b3b3b3;
+    border-radius: 5px;
+    color: white;
+    padding: 10px 15px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 10px 0 10px 0;
+}
+
+.button:hover, button:hover{
+    background-color: #d3b667;
+    border-radius: 5px;
+    color: white;
+    padding: 10px 15px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 10px 0 10px 0;
+}
+
+input[type=text]{
+    width: calc(100% - 200px);
+    padding: 12px 20px;
+    margin: 8px 0;
+    box-sizing: border-box;
+}
+
+textarea{
+    width: calc(100% - 200px);
+    height: 25%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    box-sizing: border-box;
+}
+
+a{
+    cursor: pointer;
+}
